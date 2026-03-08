@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your Name | Data Analyst</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+:root {
+    --bg: #000;
+    --card: #0d0d0d;
+    --text: #ffffff;
+    --sub: #9ca3af;
+    --border: #1a1a1a;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* NAVIGATION */
+
+header {
+    position: fixed;
+    width: 100%;
+    background: rgba(0,0,0,0.85);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--border);
+    z-index: 1000;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.logo {
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: var(--sub);
+    margin-left: 25px;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.nav a:hover {
+    color: var(--text);
+}
+
+/* HERO */
+
+.hero {
+    padding: 180px 0 120px;
+    animation: fadeIn 1.2s ease;
+}
+
+.hero h1 {
+    font-size: 52px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    max-width: 650px;
+    color: var(--sub);
+    line-height: 1.7;
+    font-size: 17px;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    border: 1px solid var(--text);
+    color: var(--text);
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: var(--text);
+    color: var(--bg);
+}
+
+/* SECTIONS */
+
+section {
+    padding: 100px 0;
+    border-top: 1px solid var(--border);
+}
+
+h2 {
+    font-size: 20px;
+    letter-spacing: 2px;
+    margin-bottom: 40px;
+    font-weight: 500;
+}
+
+/* SKILLS */
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.skills span {
+    border: 1px solid var(--border);
+    padding: 8px 14px;
+    font-size: 14px;
+    border-radius: 6px;
+    color: var(--sub);
+    transition: 0.3s;
+}
+
+.skills span:hover {
+    border-color: white;
+    color: white;
+}
+
+/* PROJECTS */
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.card {
+    background: var(--card);
+    padding: 30px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    transition: 0.4s ease;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    border-color: white;
+}
+
+.card h3 {
+    margin-bottom: 12px;
+}
+
+.card p {
+    color: var(--sub);
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* EDUCATION */
+
+.edu-item {
+    margin-bottom: 25px;
+}
+
+.edu-item h4 {
+    margin-bottom: 5px;
+}
+
+.edu-item span {
+    color: var(--sub);
+    font-size: 14px;
+}
+
+/* CONTACT */
+
+.contact p {
+    margin-bottom: 12px;
+    color: var(--sub);
+}
+
+/* FOOTER */
+
+footer {
+    text-align: center;
+    padding: 40px 0;
+    border-top: 1px solid var(--border);
+    font-size: 14px;
+    color: var(--sub);
+}
+
+/* ANIMATION */
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px) {
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="container nav">
+        <div class="logo">Your Name</div>
+        <div>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#education">Education</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </div>
+</header>
+
+<section class="hero container">
+    <h1>Aspiring Data Analyst</h1>
+    <p>
+        I analyze complex datasets to deliver fast, accurate, and actionable insights.
+        Skilled in SQL, Excel, Python, Power BI, PHP, and AI tools,
+        with a strong focus on data-driven decision making.
+    </p>
+    <a href="resume.pdf" class="btn" download>Download Resume</a>
+</section>
+
+<section class="container" id="skills">
+    <h2>SKILLS</h2>
+    <div class="skills">
+        <span>SQL</span>
+        <span>Excel</span>
+        <span>Python</span>
+        <span>PHP</span>
+        <span>Power BI</span>
+        <span>AI Tools</span>
+        <span>Data Visualization</span>
+        <span>Data Cleaning</span>
+    </div>
+</section>
+
+<section class="container" id="projects">
+    <h2>PROJECTS</h2>
+    <div class="grid">
+        <div class="card">
+            <h3>Sales Analytics Dashboard</h3>
+            <p>Interactive Power BI dashboard analyzing KPIs, revenue patterns, and growth performance.</p>
+        </div>
+        <div class="card">
+            <h3>SQL Customer Insights</h3>
+            <p>Advanced SQL queries used to extract customer segmentation and purchasing trends.</p>
+        </div>
+        <div class="card">
+            <h3>AI Resume Screening</h3>
+            <p>Python NLP system for automating resume shortlisting and skill matching.</p>
+        </div>
+    </div>
+</section>
+
+<section class="container" id="education">
+    <h2>EDUCATION & CERTIFICATION</h2>
+
+    <div class="edu-item">
+        <h4>B.Tech (2023 – 2027)</h4>
+        <span>Sri Indu College of Engineering and Technology</span>
+    </div>
+
+    <div class="edu-item">
+        <h4>Intermediate (2023)</h4>
+        <span>Chaitanya Kalasala Junior College</span>
+    </div>
+
+    <div class="edu-item">
+        <h4>10th (2021)</h4>
+        <span>Viswa Jyothi High School</span>
+    </div>
+
+    <div class="edu-item">
+        <h4>AI Data Scientist Certification</h4>
+        <span>6 Months online Training – APCC Govt </span>
+    </div>
+
+</section>
+
+<section class="container contact" id="contact">
+    <h2>CONTACT</h2>
+    <p>Email: chandusaigari6@gmail.com</p>
+    <p>Phone: +91 7396618269</p>
+    <p>LinkedIn: linkedin.com/in/chandusaigari</p>
+</section>
+
+<footer>
+    © 2026 chandu — Data Analyst
+</footer>
+
+</body>
+</html>
